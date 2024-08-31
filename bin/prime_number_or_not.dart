@@ -18,19 +18,20 @@ void main() {
   //     print("the number $number is N'tPrime");
   //   }
   // another way *******************
-  int number = 5;
-  bool isPrime=false;
-  for(int i =2; i<=number;i++){
-    if(number%i==0){
-      isPrime=true;
+ print("enter the number");
+  int number = int.parse(stdin.readLineSync());
+  bool isPrime = true;
+  for (int i = 2; i <= number; i++) {
+    if (number % i == 0) {
+      isPrime = false;
       break;
     }
   }
-  if(isPrime){
-    print("the number $number is Prime");
-      } else {
-        print("the number $number is N'tPrime");
-      }
+  if (isPrime) {
+    print("yes");
+  } else {
+    print("No");
+  }
 
 
 
