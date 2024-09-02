@@ -37,6 +37,31 @@ void main() {
 //****************another way***************
   print(isPrime(7));
 }
+
+// bool isPrime(int number){
+//   bool isPrime=true;
+//   for(int i=2; i<number;i++){
+//     if(number%i==0){
+//       isPrime=false;
+//       break;
+//     }
+//   }
+//   return isPrime;
+// }
+isPrime(int number) {
+  int counter = 0;
+  bool isPrime = true;
+  for (int i = 1; i <= number; i++) {
+    if (number % i == 0) {
+      counter++;
+    }
+  }
+  if (counter == 2) {
+    return isPrime;
+  } else {
+    return isPrime = false;
+  }
+}
 // bool isPrime(int number){
 //   bool isPrime=true;
 //   for(int i=2; i<number;i++){
