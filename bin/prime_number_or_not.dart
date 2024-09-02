@@ -1,5 +1,4 @@
 
-import 'dart:io';
 //quize solve problem the number is prime or not
 void main() {
   // int number = 5;
@@ -36,7 +35,7 @@ void main() {
   }
 */
 //****************another way***************
-print(isPrime(7));
+  print(isPrime(7));
 }
 // bool isPrime(int number){
 //   bool isPrime=true;
@@ -48,18 +47,23 @@ print(isPrime(7));
 //   }
 //   return isPrime;
 // }
- isPrime(int number){
- int counter =  0;
- bool isPrime= true;
- for(int i=1; i<=number;i++){
-    if(number%i==0){
-
-      counter++;
+void rangePrime(int start, int end) {
+  for (int i = start; i <= end; i++) {
+    if (isPrime(i)) {
+      print(i);
     }
   }
- if(counter==2) {
-   return isPrime;
- }else{
-   return isPrime =false;
- }
+}
+
+bool isPrime(int n) {
+  //2
+  if (n <= 1) {
+    return false;
+  }
+  for (int i = 2; i < n; i++) {
+    if (n % i == 0) {
+      return false;
+    }
+  }
+  return true;
 }
